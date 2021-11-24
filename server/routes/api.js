@@ -1,5 +1,5 @@
 const router = require("express").Router()
-
+const project = require("../controller/project-controller.js")
 
 router.get("/", function(req, res){
 	res.json({
@@ -7,5 +7,10 @@ router.get("/", function(req, res){
 		message: "Welcome to moonshots API"
 	})
 })
+
+router.route("/project")
+	.get(project.getProject)
+
+
 
 module.exports = router
