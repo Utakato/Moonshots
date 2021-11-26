@@ -4,3 +4,18 @@
     --honey: #F6AE2D;
     --white: #fff;
 }
+
+html {
+    background-color: var(--darkBG);
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
