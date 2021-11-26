@@ -2,10 +2,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: #3C3744;
+    background-color: var(--lightBG);
     padding: 16px;
-    
-    color: #FFFFFF;
+    color: var(--white);
     border-radius: 5px;
 }
 

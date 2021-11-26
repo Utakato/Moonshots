@@ -1,5 +1,5 @@
 .column-name {
-    color: #F6AE2D;
+    color: var(--honey);
     width: 100px;
     display: flex;
     align-items: center;
