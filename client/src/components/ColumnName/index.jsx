@@ -1,5 +1,5 @@
 import "./style.css"
-const ColumnName = ({name}) => {
+const ColumnName = ({name, value}) => {
     return (
         <div className="column-name">
             {name}

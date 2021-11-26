@@ -8,19 +8,19 @@ import * as actions from "../../actions/projectsActions"
 const CardContainer = () => {
 	const projectsState = useSelector(state => state.projects)
 	const dispatch = useDispatch()
-
-    useEffect(() => { dispatch(actions.getProjects())
+    let query = "?watchlist=-1"
+    useEffect(() => { dispatch(actions.getProjects(query))
 	},[dispatch])
     return (
         <div className="card-container">
             <div className="column-container">
-                <ColumnName name="Rank"/>
-                <ColumnName name="Symbol"/>
-                <ColumnName name="Name"/>
-                <ColumnName name="Price"/>
-                <ColumnName name="M. Cap"/>
-                <ColumnName name="Watchlist"/>
-                <ColumnName name="Followers"/>
+                <ColumnName name="Rank" value="rank"/>
+                <ColumnName name="Symbol" value="symbol"/>
+                <ColumnName name="Name" value="name"/>
+                <ColumnName name="Price" value="price"/>
+                <ColumnName name="M. Cap" value="market_cap"/>
+                <ColumnName name="Watchlist" value="watchlist"/>
+                <ColumnName name="Followers" value="twitter_followers"/>
             </div>
             {projectsState.map(project => {
                 return <Card 
