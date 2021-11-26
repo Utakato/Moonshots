@@ -14,6 +14,7 @@ const CardContainer = () => {
                 <ColumnName name="Watchlist"/>
                 <ColumnName name="Followers"/>
             </div>
+            
             <Card 
                 rank="1"
                 symbol="BTC"
