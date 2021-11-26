@@ -1,8 +1,16 @@
 import "./style.css"
 import Card from "../Card"
 import ColumnName from "../ColumnName"
+import {useSelector, useDispatch} from "react-redux"
+import { useEffect } from "react" 
+import * as actions from "../../actions/projectsActions"
 
 const CardContainer = () => {
+	const projectsState = useSelector(state => state.projects)
+	const dispatch = useDispatch()
+
+    useEffect(() => { dispatch(actions.getProjects())
+	},[dispatch])
     return (
         <div className="card-container">
             <div className="column-container">
@@ -14,44 +22,21 @@ const CardContainer = () => {
                 <ColumnName name="Watchlist"/>
                 <ColumnName name="Followers"/>
             </div>
+            {projectsState.map(project => {
+                return <Card 
+                            rank={project.rank} 
+                            symbol={project.symbol}
+                            name={project.name}
+                            price={project.price}
+                            mCap={project.market_cap}
+                            watchlist={project.watchlist}
+                            followers={project.twitter_followers}
+                            link={project.link}
+                            twitter_link={project.twitter_link}
+                            />
+            })}
             
-            <Card 
-                rank="1"
-                symbol="BTC"
-                name="Bitcoin"
-                price="62000"
-                mCap="1,000,000,000,000"
-                watchlist="50000"
-                followers="25000"
-            />
-            <Card 
-                rank="1"
-                symbol="BTC"
-                name="Bitcoin"
-                price="62000"
-                mCap="1,000,000,000,000"
-                watchlist="50000"
-                followers="25000"
-            />
-            <Card 
-                rank="1"
-                symbol="BTC"
-                name="Bitcoin"
-                price="62000"
-                mCap="1,000,000,000,000"
-                watchlist="50000"
-                followers="25000"
-            />
-            <Card 
-                rank="1"
-                symbol="BTC"
-                name="Bitcoin"
-                price="62000"
-                mCap="1,000,000,000,000"
-                watchlist="50000"
-                followers="25000"
-            />
-        </div>
+                    </div>
     )
 }
 
