@@ -8,7 +8,7 @@ router.get("/", function(req, res){
 	})
 })
 
-router.route("/project")
+router.route("/projects")
 	.get(project.getProject)
 
 
