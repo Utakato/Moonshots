@@ -14,6 +14,6 @@ const ProjectSchema = new Schema({
     twitter_link: String    
 })
 
-Project = mongoose.model("Project", ProjectSchema, 'raw_data')
+let Project = mongoose.model("Project", ProjectSchema, 'raw_data')
 
 module.exports = Project
