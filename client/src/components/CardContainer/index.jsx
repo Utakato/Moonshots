@@ -7,10 +7,12 @@ import * as actions from "../../actions/projectsActions"
 
 const CardContainer = () => {
 	const projectsState = useSelector(state => state.projects)
-	const dispatch = useDispatch()
-    let query = "?watchlist=-1"
+	const query = useSelector(state => state.query)
+    const dispatch = useDispatch()
+
+    
     useEffect(() => { dispatch(actions.getProjects(query))
-	},[dispatch])
+	},[dispatch, query])
     return (
         <div className="card-container">
             <div className="column-container">
