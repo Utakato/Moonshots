@@ -4,4 +4,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    padding: 1rem 0.5rem
+}
+
+.column-name:hover {
+    background-color: #28242D;
+}
+
+i {
+    margin: 0 0.2rem;
 }
