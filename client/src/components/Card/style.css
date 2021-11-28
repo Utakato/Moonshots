@@ -14,3 +14,17 @@
     align-items: center;
     justify-content: center;
 }
+
+.name {
+    justify-content: flex-start;
+}
+
+.name:hover {
+    cursor: pointer;
+    color:var(--honey)
+}
+
+.followers:hover {
+    cursor: pointer;
+    color:var(--honey)
+}
