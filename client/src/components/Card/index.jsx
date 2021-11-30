@@ -1,5 +1,4 @@
 import "./style.css"
-import { Redirect } from "react-router"
 
 const Card = ({rank, symbol, name, price, mCap, watchlist, followers, link, twitter_link}) => {
     const newMcap = mCap.toLocaleString().toString().slice(0,-8)

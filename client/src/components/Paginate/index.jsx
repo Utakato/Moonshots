@@ -12,7 +12,6 @@ function Paginate({ itemsPerPage }) {
   
 
   useEffect(() => {
-    const endOffset = itemOffset + itemsPerPage;    
     setPageCount(Math.ceil(900 / itemsPerPage));
   }, [itemOffset, itemsPerPage]);
 

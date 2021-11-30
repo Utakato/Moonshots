@@ -4,6 +4,3 @@ const axios = require("axios")
 export const fetchProjects = (query) => {
     return axios.post(url , query)
 }
-
-
-

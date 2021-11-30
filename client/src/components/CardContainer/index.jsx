@@ -41,6 +41,7 @@ const CardContainer = () => {
                             followers={project.twitter_followers}
                             link={project.link}
                             twitter_link={project.twitter_link}
+                            key={project.name}
                             />
             })}
             

@@ -7,7 +7,7 @@ const queryReducer = (state=defaultState, action) => {
     switch(action.type){
 
         case "query/updateQueryOrder": {
-            if (action.payload == state.order){
+            if (action.payload === state.order){
                 let order = action.payload.slice(0,-2) + "1" // Sets sort order to asc if it's already desc.
                 return {...state, order : order}
             } else {
