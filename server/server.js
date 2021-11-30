@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const mongoose = require("mongoose")
 const routes = require('./routes/api')
 const app = express()
-const port = process.env.port || 5000;
+const port = process.env.PORT || 5000;
 const cors = require("cors")
 const path = require("path")
 require("dotenv").config({ path: path.resolve(__dirname, '../.env') })
