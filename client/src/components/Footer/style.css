@@ -1,4 +1,4 @@
-h2 {
+.footer h2 {
     color: var(--white);
 }
 
@@ -9,7 +9,7 @@ h2 {
     font-size: 0.5rem;
 }
 
-a {
+.footer a {
     text-decoration: none;
     color: var(--honey);
 }
