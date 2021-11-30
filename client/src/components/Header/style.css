@@ -1,0 +1,10 @@
+h1 {
+    color: var(--honey);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem
+}
