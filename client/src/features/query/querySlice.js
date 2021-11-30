@@ -1,14 +1,24 @@
-const defaultState = "watchlist=-1"
+const defaultState = {
+    order: "watchlist=-1",
+    offset : 0
+}
+
 const queryReducer = (state=defaultState, action) => {
     switch(action.type){
-        case "query/updateQuery": {
-            if (action.payload == state){
-                let newAction = action.payload.slice(0,-2) + "1"
-                return newAction
+
+        case "query/updateQueryOrder": {
+            if (action.payload == state.order){
+                let order = action.payload.slice(0,-2) + "1" // Sets sort order to asc if it's already desc.
+                return {...state, order : order}
             } else {
-                return action.payload
+                return {...state, order: action.payload}
             }
         }
+
+        case "query/updateQueryOffset": {
+            return {...state, offset: action.payload}
+        }
+
         default: return state
     }
 }

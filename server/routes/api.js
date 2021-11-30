@@ -9,7 +9,7 @@ router.get("/", function(req, res){
 })
 
 router.route("/projects")
-	.get(project.getProject)
+	.post(project.getProject)
 
 
 

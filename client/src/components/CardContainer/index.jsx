@@ -10,8 +10,14 @@ const CardContainer = () => {
 	const query = useSelector(state => state.query)
     const dispatch = useDispatch()
 
+    let newQ = {
+        order: query.order,
+        page: query.page,
+        offset: query.offset
+    }
+
     
-    useEffect(() => { dispatch(actions.getProjects(query))
+    useEffect(() => { dispatch(actions.getProjects(newQ))
 	},[dispatch, query])
     return (
         <div className="card-container">
@@ -38,7 +44,7 @@ const CardContainer = () => {
                             />
             })}
             
-                    </div>
+        </div>
     )
 }
 

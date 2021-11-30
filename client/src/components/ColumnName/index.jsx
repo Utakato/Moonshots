@@ -14,9 +14,9 @@ const ColumnName = ({name, value}) => {
     let sort = false
     let sortDir = "fas fa-arrow-down"
     
-    if (queryState.split("=")[0] == value) {
+    if (queryState.order.split("=")[0] == value) {
         sort = true
-        if (queryState.split("=")[1] == "1" ) {
+        if (queryState.order.split("=")[1] == "1" ) {
             sortDir = "fas fa-arrow-up"
         } else {
             sortDir = "fas fa-arrow-down"
