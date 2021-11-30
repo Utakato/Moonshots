@@ -1,0 +1,15 @@
+h2 {
+    color: var(--white);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--honey);
+}
