@@ -2,12 +2,14 @@ const express = require("express")
 const bodyParser = require('body-parser')
 const mongoose = require("mongoose")
 const routes = require('./routes/api')
-const creds = require("../creds.js")
 const app = express()
 const port = process.env.port || 5000;
 const cors = require("cors")
+const path = require("path")
+require("dotenv").config({ path: path.resolve(__dirname, '../.env') })
 
-mongoDB = `mongodb+srv://${creds['user']}:${creds['password']}@cluster0.flhu6.mongodb.net/${creds['db']}?retryWrites=true&w=majority`
+
+mongoDB = `mongodb+srv://${process.env.USERDB}:${process.env.PASSWORD}@cluster0.flhu6.mongodb.net/${process.env.DB}?retryWrites=true&w=majority`
 
 mongoose.connect(mongoDB)
 
