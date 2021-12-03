@@ -7,22 +7,22 @@ const Card = ({rank, symbol, name, price, mCap, watchlist, followers, link, twit
     }
 
     const handleClick = () => {
-        window.open(link, "_blank")
+        window.open(link, "_blank") // goes to CMC.com
     }
 
-    const handleTwitterClick = () => {
-        window.open(twitter_link, "_blank")
+    const handleSiteClick = () => {
+        window.open(twitter_link, "_blank") // this actually goes on the project's site. Not twitter account. TBF
     }
     
     return (
         <div className="card">
             <div className="stats rank"> # {rank} </div>
             <div className="stats symbol"> {symbol}</div>
-            <div className="stats name" onClick={handleClick}>{name}</div>
+            <div className="stats name clickable" onClick={handleSiteClick}>{name}</div>
             <div className="stats price">{(price > 1) ? price.toLocaleString(): price} $</div>
             <div className="stats market-cap">{newMcap}M $</div>
-            <div className="stats watchlist">{watchlist.toLocaleString()}</div>
-            <div className="stats followers" onClick={handleTwitterClick}>{followers.toLocaleString()}</div>
+            <div className="stats watchlist clickable" onClick={handleClick}> {watchlist.toLocaleString()}</div>
+            <div className="stats followers" >{followers.toLocaleString()}</div> 
         </div>
     )
 }

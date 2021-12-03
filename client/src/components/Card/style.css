@@ -17,14 +17,10 @@
 
 .name {
     justify-content: flex-start;
+    padding: 0 0.5rem;
 }
 
-.name:hover {
-    cursor: pointer;
-    color:var(--honey)
-}
-
-.followers:hover {
+.clickable:hover {
     cursor: pointer;
     color:var(--honey)
 }
