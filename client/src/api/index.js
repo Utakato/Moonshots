@@ -1,4 +1,4 @@
-const url = "http://localhost:5000/api/projects"
+const url = "https://test-moonshots.herokuapp.com/api/projects"
 const axios = require("axios")
 
 export const fetchProjects = (query) => {
