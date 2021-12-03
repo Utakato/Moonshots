@@ -6,7 +6,7 @@ const app = express()
 const port = process.env.PORT || 5000;
 const cors = require("cors")
 const path = require("path")
-require("dotenv").config({ path: path.resolve(__dirname, '../.env') })
+require("dotenv").config({ path: path.resolve(__dirname, './.env') })
 
 
 mongoDB = `mongodb+srv://${process.env.USERDB}:${process.env.PASSWORD}@cluster0.flhu6.mongodb.net/${process.env.DB}?retryWrites=true&w=majority`
