@@ -11,7 +11,7 @@ const Card = ({rank, symbol, name, price, mCap, watchlist, followers, link, twit
     }
 
     const handleSiteClick = () => {
-        window.open(twitter_link, "_blank") // this actually goes on the project's site. Not twitter account. TBF
+        window.open(twitter_link, "_blank") // this actually goes on the project's site. Not twitter account. Fix this in data-gatherer twitter.py
     }
     
     return (
