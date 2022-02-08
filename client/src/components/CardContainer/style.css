@@ -1,10 +1,11 @@
 .card-container {
     display: flex;
     flex-direction: column;
-    width: 1000px;
+    width: 80vw;
     gap: 12px;
     background-color: var(--darkBG);
     padding: 2rem;
+    overflow-x: scroll;
 }
 
 .column-container {
@@ -12,4 +13,17 @@
     flex-direction: row;
     justify-content: space-around;
     padding: 16px;
+    min-width: 800px;
+}
+
+
+@media screen and (max-width:550px) {
+    .card-container {
+        padding: .5rem;
+        width: 90vw;
+    }
+
+    .column-container {
+        min-width: 700px;
+    }
 }

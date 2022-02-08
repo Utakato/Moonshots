@@ -6,6 +6,11 @@
     padding: 16px;
     color: var(--white);
     border-radius: 5px;
+    min-width:800px;
+}
+
+.stats.price {
+    justify-content:flex-start;
 }
 
 .stats {
@@ -18,9 +23,26 @@
 .name {
     justify-content: flex-start;
     padding: 0 0.5rem;
+    word-break: break-word;
 }
 
 .clickable:hover {
     cursor: pointer;
     color:var(--honey)
+}
+
+@media screen and (max-width: 550px) {
+    .stats {
+        width: 65px;
+        font-size: .8rem;
+    }
+
+    .card {
+        padding: 8px;
+        min-width: 700px;
+    }
+
+    .name {
+        padding: 0;
+    }
 }
