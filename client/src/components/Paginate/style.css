@@ -16,7 +16,7 @@ ul {
 .paginate a {
     background-color: #322D39;
     padding: 0.5rem;
-    margin: 0.1rem;
+    margin: 0.2rem;
     color: var(--white);
     cursor: pointer;
     width: 24px;
@@ -54,5 +54,11 @@ li.previous a, li.next a{
 @media screen and (max-width:800px) {
     .next, .previous {
         display:none;
+    }
+}
+
+@media screen and (max-width:435px) {
+    .paginate a {
+        padding: .45rem;
     }
 }

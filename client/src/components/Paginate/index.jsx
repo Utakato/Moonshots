@@ -28,6 +28,7 @@ function Paginate({ itemsPerPage }) {
         nextLabel="next >"
         onPageChange={handlePageClick}
         pageRangeDisplayed={3}
+        marginPagesDisplayed= {1}
         pageCount={pageCount}
         previousLabel="< previous"
         renderOnZeroPageCount={null}
